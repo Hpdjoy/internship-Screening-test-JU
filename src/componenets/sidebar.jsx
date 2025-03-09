@@ -23,21 +23,24 @@ const [show, setShow] = React.useState(false);
                       {show? <><RxCross2 onClick={()=>{setShow(!show)}}/> <h6>Welcome</h6></> :<IoMenu onClick={()=>{setShow(!show)}}/>}
                   </div>
 
-                  <Link to="/"><div className='sidebar-icons'>
+                  <Link to="/"><div className='sidebar-icons' title='Dashboard'>
                   <MdSpaceDashboard />
                  {show?<span className='sidebar-icon-text'>Dashboard</span>:""}
                   </div>
                   </Link>
-                  <Link to="/Home"> <div className='sidebar-icons'>
-                        <MdHomeMax/>
-                        {show?<span className='sidebar-icon-text'>Home</span>:""} 
-                  </div>
 
-                  </Link>
+
                   <Link to="/map">
                   <div className='sidebar-icons' title='view on map'>
                        <FaMap />
-                        {show?<span className='sidebar-icon-text'>Map</span>:""}
+                        {show?<span className='sidebar-icon-text'>See on map</span>:""}
+                  </div>
+                  </Link>
+
+
+                  <Link to="/Home"> <div className='sidebar-icons'>
+                        <MdHomeMax/>
+                        {show?<span className='sidebar-icon-text'>Details</span>:""} 
                   </div>
                   </Link>
           
